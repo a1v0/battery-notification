@@ -1,10 +1,44 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace BatteryNotification
 {
     internal class Program
     {
+        // 
+        // TODO:
+        // Convert this to Windows Console app to prevent the opening the console when executing
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         [StructLayout(LayoutKind.Sequential)]
         public struct SYSTEM_POWER_STATUS
         {
@@ -27,12 +61,12 @@ namespace BatteryNotification
         {
             if (args.Length < 1)
             {
-                Console.WriteLine("No arguments given. Please provide argument and try again.");
+                // Console.WriteLine("No arguments given. Please provide argument and try again.");
                 return;
             }
             if (args.Length > 1)
             {
-                Console.WriteLine("Too many arguments given. Please provide one argument and try again.");
+                // Console.WriteLine("Too many arguments given. Please provide one argument and try again.");
                 return;
             }
 
@@ -43,7 +77,7 @@ namespace BatteryNotification
                     BatteryChecker.HandleFullBattery();
                     break;
                 default:
-                    Console.WriteLine($"'{arg}' is not a recognised argument.");
+                    // Console.WriteLine($"'{arg}' is not a recognised argument.");
                     return;
             }
         }
