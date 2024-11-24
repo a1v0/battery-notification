@@ -44,7 +44,7 @@ namespace BatteryNotification
                     // TODO:
                     // rename argument
                     // it doesn't sound very good
-                    BatteryChecker.CheckIsFull();
+                    BatteryChecker.HandleFullBattery();
                     // 
                     // TODO:
                     // create notification class to send resultant message

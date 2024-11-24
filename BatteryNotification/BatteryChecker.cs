@@ -2,7 +2,9 @@ namespace BatteryNotification
 {
     public class BatteryChecker
     {
-        public static bool CheckIsFull()
+        private static readonly byte FullChargeThreshold = 98;
+
+        public static void HandleFullBattery()
         {
             Program.SYSTEM_POWER_STATUS status;
             if (Program.GetSystemPowerStatus(out status))
@@ -52,7 +54,6 @@ namespace BatteryNotification
             // 
             // 
             // 
-            return true;
         }
     }
 }
