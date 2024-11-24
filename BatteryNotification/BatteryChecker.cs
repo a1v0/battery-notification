@@ -19,10 +19,10 @@ namespace BatteryNotification
             }
             // 
             // TODO:
-            // improve placeholder
-            // 
-            // 
-            // 
+            // re-evaluate method name and return value:
+            // - probably doesn't need to return anything
+            // - if no return value, name shouldn't be "check"
+            // - this perhaps also has ramifications for the "check-full" arg
             // 
             // 
             // 
