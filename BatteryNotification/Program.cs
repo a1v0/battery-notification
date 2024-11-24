@@ -24,7 +24,6 @@ namespace BatteryNotification
 
         static void Main(string[] args)
         {
-            args = ["full-battery"]; // TODO: Make this dynamic, if additional args are needed in future
             if (args.Length < 1)
             {
                 NotificationHandler.Notify("No arguments given. Please provide argument and try again.");
