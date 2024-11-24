@@ -5,6 +5,25 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
+            // 
+            // TODO:
+            // retrieve args and throw error or call method
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
         }
     }
 }
