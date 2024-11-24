@@ -2,7 +2,7 @@ namespace BatteryNotification
 {
     public class BatteryChecker
     {
-        public static bool CheckFull()
+        public static bool CheckIsFull()
         {
             // 
             // TODO:
