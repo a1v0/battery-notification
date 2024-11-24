@@ -9,7 +9,7 @@
         <SelfContained>true</SelfContained>
         <PublishSingleFile>true</PublishSingleFile>
         <PublishTrimmed>true</PublishTrimmed>
-        <PublishDir>C:\Program Files\BatteryNotification</PublishDir>
+        <PublishDir>C:\BatteryNotification</PublishDir>
     </PropertyGroup>
 
     <ItemGroup>
