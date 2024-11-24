@@ -7,10 +7,23 @@ namespace BatteryNotification
             Program.SYSTEM_POWER_STATUS status;
             if (Program.GetSystemPowerStatus(out status))
             {
-                Console.WriteLine("Battery Life Percent: {0}%", status.BatteryLifePercent);
-                Console.WriteLine("Battery Life Time: {0} seconds", status.BatteryLifeTime);
-                Console.WriteLine(status.ACLineStatus); // This determines whether the battery is charging: 1=yes, 0=no
-                NotificationHandler.Notify("SOME SORT OF MESSAGE");
+                byte batteryLife = status.BatteryLifePercent;
+
+                Console.WriteLine("Battery Life Percent: {0}%", batteryLife);
+                
+                bool isCharging = status.ACLineStatus == 1; // TODO: check if there can be any other value other than 1 and 0. Should the check actually be != 0? Does this return 0 if battery is at 100%?
+
+                if (!isCharging)
+                {
+                    Console.WriteLine("Battery not charging.");
+                    return;
+                }
+
+                bool thresholdIsMet = batteryLife >= FullChargeThreshold;
+
+                if (!thresholdIsMet) return;
+
+                NotificationHandler.Notify("Battery Charge: {0}%.\n\nPlease unplug device.", batteryLife);
             }
             else
             {
