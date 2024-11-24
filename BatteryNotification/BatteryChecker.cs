@@ -13,7 +13,7 @@ namespace BatteryNotification
 
                 Console.WriteLine($"Battery Life Percent: {batteryLife}%");
                 
-                bool isCharging = status.ACLineStatus == 1; // TODO: check if there can be any other value other than 1 and 0. Should the check actually be != 0? Does this return 0 if battery is at 100%?
+                bool isCharging = status.ACLineStatus != 0; // 0 is not charging; 1 is charging; 255 is unknown, which I am treating the same as 1
 
                 if (!isCharging)
                 {
