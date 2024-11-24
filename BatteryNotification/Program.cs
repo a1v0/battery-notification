@@ -21,6 +21,9 @@ namespace BatteryNotification
         [DllImport("kernel32.dll")]
         public static extern bool GetSystemPowerStatus(out SYSTEM_POWER_STATUS sps);
 
+         [DllImport("User32.dll", CharSet = CharSet.Unicode)]
+         public static extern int MessageBox(IntPtr h, string m, string c, int type); // Using MessageBox here prevents us from needing to ship the code with Windows Forms
+
         static void Main(string[] args)
         {
             if (args.Length < 1)
