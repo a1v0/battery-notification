@@ -1,7 +1,26 @@
-﻿namespace BatteryNotification
+﻿using System;
+using System.Runtime.InteropServices;
+
+namespace BatteryNotification
 {
     internal class Program
     {
+        // Define SYSTEM_POWER_STATUS struct
+        [StructLayout(LayoutKind.Sequential)]
+        public struct SYSTEM_POWER_STATUS
+        {
+            public byte ACLineStatus;
+            public byte BatteryFlag;
+            public byte BatteryLifePercent;
+            public byte Reserved1;
+            public uint BatteryLifeTime;
+            public uint BatteryFullLifeTime;
+        }
+
+        // Import GetSystemPowerStatus from kernel32.dll
+        [DllImport("kernel32.dll")]
+        public static extern bool GetSystemPowerStatus(out SYSTEM_POWER_STATUS sps);
+
         static void Main(string[] args)
         {
             if (args.Length < 1)
@@ -22,6 +41,7 @@
                     // TODO:
                     // rename argument
                     // it doesn't sound very good
+                    BatteryChecker.CheckIsFull();
                     break;
                 default:
                     Console.WriteLine($"'{arg}' is not a recognised argument.");
