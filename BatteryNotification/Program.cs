@@ -5,10 +5,10 @@ namespace BatteryNotification
 {
     internal class Program
     {
-        // Define SYSTEM_POWER_STATUS struct
         [StructLayout(LayoutKind.Sequential)]
         public struct SYSTEM_POWER_STATUS
         {
+            // More info here: https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-system_power_status
             public byte ACLineStatus;
             public byte BatteryFlag;
             public byte BatteryLifePercent;
@@ -17,12 +17,11 @@ namespace BatteryNotification
             public uint BatteryFullLifeTime;
         }
 
-        // Import GetSystemPowerStatus from kernel32.dll
         [DllImport("kernel32.dll")]
         public static extern bool GetSystemPowerStatus(out SYSTEM_POWER_STATUS sps);
 
-         [DllImport("User32.dll", CharSet = CharSet.Unicode)]
-         public static extern int MessageBox(IntPtr h, string m, string c, int type); // Using MessageBox here prevents us from needing to ship the code with Windows Forms
+        [DllImport("User32.dll", CharSet = CharSet.Unicode)]
+        public static extern int MessageBox(IntPtr h, string m, string c, int type); // Using MessageBox here prevents us from needing to ship the code with Windows Forms, which ought to improve performance
 
         static void Main(string[] args)
         {
