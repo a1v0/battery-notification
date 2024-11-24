@@ -42,6 +42,16 @@ namespace BatteryNotification
                     // rename argument
                     // it doesn't sound very good
                     BatteryChecker.CheckIsFull();
+                    // 
+                    // TODO:
+                    // create notification class to send resultant message
+                    // 
+                    // 
+                    // 
+                    // 
+                    // 
+                    // 
+                    // 
                     break;
                 default:
                     Console.WriteLine($"'{arg}' is not a recognised argument.");
