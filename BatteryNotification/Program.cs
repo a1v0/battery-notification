@@ -27,12 +27,12 @@ namespace BatteryNotification
             args = ["full-battery"]; // TODO: Make this dynamic, if additional args are needed in future
             if (args.Length < 1)
             {
-                // Console.WriteLine("No arguments given. Please provide argument and try again.");
+                NotificationHandler.Notify("No arguments given. Please provide argument and try again.");
                 return;
             }
             if (args.Length > 1)
             {
-                // Console.WriteLine("Too many arguments given. Please provide one argument and try again.");
+                NotificationHandler.Notify("Too many arguments given. Please provide one argument and try again.");
                 return;
             }
 
@@ -43,7 +43,7 @@ namespace BatteryNotification
                     BatteryChecker.HandleFullBattery();
                     break;
                 default:
-                    // Console.WriteLine($"'{arg}' is not a recognised argument.");
+                    NotificationHandler.Notify($"'{arg}' is not a recognised argument.");
                     return;
             }
         }
