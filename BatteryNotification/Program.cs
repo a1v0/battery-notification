@@ -4,41 +4,6 @@ namespace BatteryNotification
 {
     internal class Program
     {
-        // 
-        // TODO:
-        // Convert this to Windows Console app to prevent the opening the console when executing
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
-        // 
         [StructLayout(LayoutKind.Sequential)]
         public struct SYSTEM_POWER_STATUS
         {
@@ -59,6 +24,7 @@ namespace BatteryNotification
 
         static void Main(string[] args)
         {
+            args = ["full-battery"]; // TODO: Make this dynamic, if additional args are needed in future
             if (args.Length < 1)
             {
                 // Console.WriteLine("No arguments given. Please provide argument and try again.");
