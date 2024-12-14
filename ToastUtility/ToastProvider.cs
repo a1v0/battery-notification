@@ -15,6 +15,17 @@ namespace ToastUtility
             }
         }
 
+        public void ShowToast(Type type)
+        {
+            switch (type)
+            {
+                default:
+                    break;
+            }
+
+            ToastMessage.Show();
+        }
+
         private void SetHeader(string headerText)
         {
             ToastMessage.AddText(headerText);
