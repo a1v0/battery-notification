@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatteryNotification", "BatteryNotification\BatteryNotification.csproj", "{C716BB2A-6E90-4D0A-81CB-D9D33A068370}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToastUtility", "ToastUtility\ToastUtility.csproj", "{F55E3F93-6850-4FE6-8B53-FF3AD853BF8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToastUtility", "ToastUtility\ToastUtility.csproj", "{F55E3F93-6850-4FE6-8B53-FF3AD853BF8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
