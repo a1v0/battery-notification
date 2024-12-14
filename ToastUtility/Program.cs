@@ -6,6 +6,29 @@ namespace ToastUtility
     {
         static void Main(string[] args)
         {
+            new ToastContentBuilder()
+                .AddText("Andrew sent you a picturesdmsd")
+                .AddText("Andrew sent you a pictures")
+                .SetToastScenario(ToastScenario.Reminder)
+                .AddButton(new ToastButtonDismiss())
+
+                // 
+                // TODO:
+                // un-hard-code this URI
+                // 
+                // 
+                // 
+                // 
+                // 
+                // 
+                // 
+                // 
+                // 
+                // 
+                // 
+                // 
+                .AddAppLogoOverride(new Uri(@"C:\Users\mensu\Desktop\battery-notification\ToastUtility\toast-icon.png"), ToastGenericAppLogoCrop.Circle)
+                .Show();
             if (args.Length < 1)
             {
                 // 
@@ -23,7 +46,7 @@ namespace ToastUtility
                 // 
                 // 
                 // 
-                return;
+                // return;
             }
             // 
             // 
@@ -48,25 +71,6 @@ namespace ToastUtility
             // 
             // 
             // 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            new ToastContentBuilder()
-                .AddArgument("action", "viewConversation")
-                .AddArgument("conversationId", 9813)
-                .AddText("Andrew sent you a picturesdmsd")
-                .AddText("Check this out, The Enchantments in Washington!")
-                .Show();
         }
     }
 }
