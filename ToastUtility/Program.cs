@@ -7,11 +7,11 @@ namespace ToastUtility
         static void Main(string[] args)
         {
             new ToastContentBuilder()
+                .SetToastScenario(ToastScenario.Alarm)
                 .AddText("Andrew sent you a picturesdmsd")
                 .AddText("Andrew sent you a pictures")
-                .SetToastScenario(ToastScenario.Reminder)
                 .AddButton(new ToastButtonDismiss())
-
+                .AddAudio(new Uri(@"C:\Windows\Media\Windows Notify System Generic.wav"))
                 // 
                 // TODO:
                 // un-hard-code this URI
