@@ -29,5 +29,15 @@ namespace ToastUtility
         {
             FullBattery
         }
+
+        private static ToastContentBuilder GetBaseToastMessage()
+        {
+            ToastContentBuilder baseToastMessage = new();
+
+            Uri notificationSoundUri = new(@"C:\Windows\Media\Windows Notify System Generic.wav");
+            baseToastMessage.AddAudio(notificationSoundUri);
+
+            return baseToastMessage;
+        }
     }
 }
