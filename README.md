@@ -4,6 +4,8 @@ C# command-line application to create toast messages on Windows when the battery
 
 My current goal is to send a notification when the battery is nearly fully charged, so that the battery doesn't overcharge (conventional wisdom seems to dictate that keeping a laptop plugged in is bad).
 
+Runs on: Windows (10 and beyond)
+
 ## Projects
 
 To minimise RAM use, I have created two projects: one to check the battery status and a second to create the toast messages.
