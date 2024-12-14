@@ -1,7 +1,10 @@
 namespace ToastUtility
 {
-    public static class ToastProvider
+    public class ToastProvider
     {
-
+        public enum Type
+        {
+            FullBattery
+        }
     }
 }
