@@ -14,6 +14,11 @@ namespace ToastUtility
             ToastMessage.AddText(headerText);
         }
 
+        private void SetBody(string bodyText)
+        {
+            ToastMessage.AddText(bodyText);
+        }
+
         public enum Type
         {
             FullBattery
