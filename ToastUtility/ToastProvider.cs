@@ -4,10 +4,16 @@ namespace ToastUtility
 {
     public class ToastProvider
     {
+
+        private ToastContentBuilder? _toastMessage;
         private ToastContentBuilder ToastMessage
         {
-            get;
-        } = new ToastContentBuilder();
+            get
+            {
+                _toastMessage ??= GetBaseToastMessage();
+                return _toastMessage;
+            }
+        }
 
         private void SetHeader(string headerText)
         {
