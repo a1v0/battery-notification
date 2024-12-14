@@ -1,10 +1,7 @@
 namespace ToastUtility
 {
-    public class ToastProvider
+    public static class ToastProvider
     {
-        public ToastProvider()
-        {
 
-        }
     }
 }
