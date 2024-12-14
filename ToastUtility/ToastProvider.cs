@@ -9,6 +9,11 @@ namespace ToastUtility
             get;
         } = new ToastContentBuilder();
 
+        private void SetHeader(string headerText)
+        {
+            ToastMessage.AddText(headerText);
+        }
+
         public enum Type
         {
             FullBattery
