@@ -23,7 +23,7 @@ namespace BatteryNotification
 
                 if (!thresholdIsMet) return;
 
-                NotificationHandler.Notify($"Battery Charge: {batteryLife}%.\n\nPlease unplug device.");
+                NotificationHandler.ShowToast($"1 {batteryLife}");
             }
             else
             {
