@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace BatteryNotification
 {
     public class NotificationHandler
@@ -31,7 +33,24 @@ namespace BatteryNotification
         /// <param name="args">String containing all CLI arguments to be provided to the ToastUtility.</param>
         public static void ShowToast(string args)
         {
+            ProcessStartInfo startInfo = new();
+            startInfo.CreateNoWindow = false;
+            startInfo.UseShellExecute = false;
+            startInfo.FileName = @$"{Directory.GetCurrentDirectory()}\ToastUtility.exe";
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            startInfo.Arguments = args;
 
+            try
+            {
+                using (Process exeProcess = Process.Start(startInfo))
+                {
+                    exeProcess.WaitForExit(); // The `using` statement will close after the exit
+                }
+            }
+            catch
+            {
+                Notify($"Error invoking {startInfo.FileName}.");
+            }
         }
     }
 }
