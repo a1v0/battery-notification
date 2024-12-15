@@ -27,7 +27,7 @@ namespace BatteryNotification
             }
             else
             {
-                NotificationHandler.Notify("Unable to get battery status."); // This could become irritating if inability to access the battery status is a frequent occurrence
+                NotificationHandler.NotifyBasic("Unable to get battery status."); // This could become irritating if inability to access the battery status is a frequent occurrence
             }
         }
     }

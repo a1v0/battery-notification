@@ -6,24 +6,8 @@ namespace BatteryNotification
     {
         private static readonly string NotificationHeader = "Battery Status";
 
-        public static void Notify(string message)
+        public static void NotifyBasic(string message)
         {
-            // 
-            // 
-            // TODO:
-            // Expand this to enable calls to the ToastUtility project,
-            // as and where necessary.
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
             Program.MessageBox((IntPtr)0, message, NotificationHeader, 0);
         }
 
@@ -49,7 +33,7 @@ namespace BatteryNotification
             }
             catch
             {
-                Notify($"Error invoking {startInfo.FileName}.");
+                NotifyBasic($"Error invoking {startInfo.FileName}.");
             }
         }
     }
