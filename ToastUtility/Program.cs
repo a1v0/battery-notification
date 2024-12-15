@@ -6,22 +6,8 @@
         {
             if (args.Length < 1)
             {
-                // 
-                // TODO:
-                // trigger notification 
-                // 
-                // 
-                // 
-                // 
-                // 
-                // 
-                // 
-                // 
-                // 
-                // 
-                // 
-                // 
-                // return;
+                new ToastProvider().ShowToast(ToastProvider.Type.Error);
+                return;
             }
             // 
             // 
