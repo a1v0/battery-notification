@@ -64,6 +64,7 @@ namespace ToastUtility
 
         public enum Type
         {
+            Error = 0,
             FullBattery = 1
         }
 
