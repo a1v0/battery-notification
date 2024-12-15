@@ -34,6 +34,7 @@ namespace ToastUtility
                     BuildErrorToast("Error: Invalid toast type given.", $"Type '{data}' cannot be converted into a valid toast type.");
                     break;
                 default:
+                    BuildErrorToast("Error: Invalid toast type given.", $"Type '{type}' cannot be converted into a valid toast type.");
                     break;
             }
 
