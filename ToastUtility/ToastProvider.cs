@@ -53,7 +53,8 @@ namespace ToastUtility
             string body = "Your battery is fully charged and can be unplugged.";
             if (batteryLife != null)
             {
-                body = $"Battery Charge: {batteryLife}%.\n\nPlease unplug device.";
+                bool isValidByte = byte.TryParse(batteryLife, out byte result);
+                if (isValidByte) body = $"Battery Charge: {batteryLife}%. Please unplug device.";
             }
 
             SetBody(body);
