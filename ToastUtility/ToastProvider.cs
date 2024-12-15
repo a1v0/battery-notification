@@ -67,7 +67,7 @@ namespace ToastUtility
             SetHeader(header);
             SetBody(body);
 
-            ToastMessage.AddAppLogoOverride(new Uri(@$"{Directory.GetCurrentDirectory()}\error-icon.png"), ToastGenericAppLogoCrop.Circle);
+            ToastMessage.AddAppLogoOverride(new Uri(@$"{AppContext.BaseDirectory}error-icon.png"), ToastGenericAppLogoCrop.Circle);
         }
 
         private void SetHeader(string headerText)
@@ -96,7 +96,7 @@ namespace ToastUtility
             baseToastMessage
                 .AddAudio(notificationSoundUri)
                 .AddButton(new ToastButtonDismiss())
-                .AddAppLogoOverride(new Uri(@$"{Directory.GetCurrentDirectory()}\toast-icon.png"), ToastGenericAppLogoCrop.Circle);
+                .AddAppLogoOverride(new Uri(@$"{AppContext.BaseDirectory}toast-icon.png"), ToastGenericAppLogoCrop.Circle);
 
             return baseToastMessage;
         }
