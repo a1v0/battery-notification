@@ -6,7 +6,7 @@
         {
             if (args.Length < 1)
             {
-                new ToastProvider().ShowToast(ToastProvider.Type.Error);
+                new ToastProvider().ShowToast(ToastProvider.Type.NoArgsError);
                 return;
             }
             // 
