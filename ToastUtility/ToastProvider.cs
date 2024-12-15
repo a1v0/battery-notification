@@ -80,7 +80,8 @@ namespace ToastUtility
         {
             FullBattery = 1,
             NoArgsError = 400,
-            InvalidArgsError = 401
+            InvalidArgsError = 401,
+            TooManyArgsError = 402
         }
 
         private static ToastContentBuilder GetBaseToastMessage()
