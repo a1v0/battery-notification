@@ -96,7 +96,8 @@ namespace ToastUtility
         public enum Type
         {
             FullBattery = 1,
-            NoArgsError = 400
+            NoArgsError = 400,
+            InvalidArgsError = 401
         }
 
         private static ToastContentBuilder GetBaseToastMessage()
