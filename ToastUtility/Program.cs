@@ -9,6 +9,11 @@
                 new ToastProvider().ShowToast(ToastProvider.Type.NoArgsError);
                 return;
             }
+            if (args.Length > 2)
+            {
+                new ToastProvider().ShowToast(ToastProvider.Type.TooManyArgsError);
+                return;
+            }
 
             foreach (string arg in args)
             {
