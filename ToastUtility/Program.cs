@@ -20,6 +20,14 @@
                 }
                 catch
                 {
+                    // 
+                    // TODO:
+                    // This catch block occasionally catches other errors
+                    // down the line, at which point the value of "args"
+                    // isn't what it should be. Not sure what's causing
+                    // this to happen, but it's currently not an important
+                    // bug.
+                    // 
                     toastProvider.ShowToast(ToastProvider.Type.InvalidArgsError, arg);
                 }
             }
