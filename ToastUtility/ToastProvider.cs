@@ -54,8 +54,10 @@ namespace ToastUtility
         private void BuildErrorToast(string header, string body)
         {
             ToastMessage.SetToastScenario(ToastScenario.Alarm);
+
             SetHeader(header);
             SetBody(body);
+
             // 
             // TODO:
             // provide suitable icon
