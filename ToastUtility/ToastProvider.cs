@@ -25,28 +25,35 @@ namespace ToastUtility
             switch (type)
             {
                 case Type.FullBattery:
-                    BuildFullBatteryToast();
+                    BuildFullBatteryToast(data);
                     break;
                 case Type.NoArgsError:
                     BuildErrorToast("Error: No arguments given.", "ToastUtility called without any arguments.");
                     break;
                 case Type.InvalidArgsError:
-                    BuildErrorToast("Error: Invalid toast type given.", $"Type '{data}' cannot be converted into a valid toast type.");
+                    BuildErrorToast("Error: Invalid arguments provided.", $"Args '{data}' cannot be converted into a valid toast.");
                     break;
                 default:
-                    BuildErrorToast("Error: Invalid toast type given.", $"Type '{type}' cannot be converted into a valid toast type.");
+                    BuildErrorToast("Error: Invalid toast type given.", $"Type '{type}' is not a recognised toast type.");
                     break;
             }
 
             ToastMessage.Show();
         }
 
-        private void BuildFullBatteryToast()
+        private void BuildFullBatteryToast(string? batteryLife)
         {
             ToastMessage.SetToastScenario(ToastScenario.Alarm);
 
             SetHeader("Unplug your machine.");
-            SetBody("Your battery is fully charged and can be unplugged.");
+
+            string body = "Your battery is fully charged and can be unplugged.";
+            if (batteryLife != null)
+            {
+                body = $"Battery Charge: {batteryLife}%.\n\nPlease unplug device.";
+            }
+
+            SetBody(body);
         }
 
         private void BuildErrorToast(string header, string body)
