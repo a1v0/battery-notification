@@ -47,8 +47,6 @@ namespace ToastUtility
 
             SetHeader("Unplug your machine.");
             SetBody("Your battery is fully charged and can be unplugged.");
-
-            ToastMessage.AddAppLogoOverride(new Uri(@$"{Directory.GetCurrentDirectory()}\toast-icon.png"), ToastGenericAppLogoCrop.Circle);
         }
 
         private void BuildErrorToast(string header, string body)
@@ -85,7 +83,8 @@ namespace ToastUtility
             Uri notificationSoundUri = new(@"C:\Windows\Media\Windows Notify System Generic.wav");
             baseToastMessage
                 .AddAudio(notificationSoundUri)
-                .AddButton(new ToastButtonDismiss());
+                .AddButton(new ToastButtonDismiss())
+                .AddAppLogoOverride(new Uri(@$"{Directory.GetCurrentDirectory()}\toast-icon.png"), ToastGenericAppLogoCrop.Circle);
 
             return baseToastMessage;
         }
