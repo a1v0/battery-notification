@@ -15,7 +15,12 @@ namespace ToastUtility
             }
         }
 
-        public void ShowToast(Type type)
+        /// <summary>
+        /// Handles the display of all toast messages.
+        /// </summary>
+        /// <param name="type">Toast message type, as determined by enum.</param>
+        /// <param name="data">Optional string of data to be included in toast message.</param>
+        public void ShowToast(Type type, string? data = null)
         {
             switch (type)
             {
