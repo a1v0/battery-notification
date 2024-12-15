@@ -22,6 +22,9 @@ namespace ToastUtility
                 case Type.FullBattery:
                     BuildFullBatteryToast();
                     break;
+                case Type.NoArgsError:
+                    BuildErrorToast("Error: No arguments given.", "ToastUtility called without any arguments.");
+                    break;
                 default:
                     break;
             }
@@ -40,6 +43,29 @@ namespace ToastUtility
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            ToastMessage.AddAppLogoOverride(new Uri(@"C:\Users\mensu\Desktop\battery-notification\ToastUtility\toast-icon.png"), ToastGenericAppLogoCrop.Circle);
+        }
+
+        private void BuildErrorToast(string header, string body)
+        {
+            ToastMessage.SetToastScenario(ToastScenario.Alarm);
+            SetHeader(header);
+            SetBody(body);
+            // 
+            // TODO:
+            // provide suitable icon
+            // 
+            // 
+            // un-hard-code this URI
             // 
             // 
             // 
