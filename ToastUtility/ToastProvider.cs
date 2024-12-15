@@ -44,24 +44,11 @@ namespace ToastUtility
         private void BuildFullBatteryToast()
         {
             ToastMessage.SetToastScenario(ToastScenario.Alarm);
+
             SetHeader("Unplug your machine.");
             SetBody("Your battery is fully charged and can be unplugged.");
-            // 
-            // TODO:
-            // un-hard-code this URI
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            ToastMessage.AddAppLogoOverride(new Uri(@"C:\Users\mensu\Desktop\battery-notification\ToastUtility\toast-icon.png"), ToastGenericAppLogoCrop.Circle);
+
+            ToastMessage.AddAppLogoOverride(new Uri(@$"{Directory.GetCurrentDirectory()}\toast-icon.png"), ToastGenericAppLogoCrop.Circle);
         }
 
         private void BuildErrorToast(string header, string body)
