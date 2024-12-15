@@ -23,11 +23,11 @@ namespace BatteryNotification
 
                 if (!thresholdIsMet) return;
 
-                NotificationHandler.Notify($"Battery Charge: {batteryLife}%.\n\nPlease unplug device.");
+                NotificationHandler.NotifyToast($"1 {batteryLife}");
             }
             else
             {
-                NotificationHandler.Notify("Unable to get battery status."); // This could become irritating if inability to access the battery status is a frequent occurrence
+                NotificationHandler.NotifyBasic("Unable to get battery status."); // This could become irritating if inability to access the battery status is a frequent occurrence
             }
         }
     }
