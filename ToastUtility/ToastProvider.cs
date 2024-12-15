@@ -30,6 +30,9 @@ namespace ToastUtility
                 case Type.NoArgsError:
                     BuildErrorToast("Error: No arguments given.", "ToastUtility called without any arguments.");
                     break;
+                case Type.InvalidArgsError:
+                    BuildErrorToast("Error: Invalid toast type given.", $"Type '{data}' cannot be converted into a valid toast type.");
+                    break;
                 default:
                     break;
             }
