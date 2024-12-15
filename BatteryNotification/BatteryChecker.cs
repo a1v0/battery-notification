@@ -23,7 +23,7 @@ namespace BatteryNotification
 
                 if (!thresholdIsMet) return;
 
-                NotificationHandler.ShowToast($"1 {batteryLife}");
+                NotificationHandler.NotifyToast($"1 {batteryLife}");
             }
             else
             {

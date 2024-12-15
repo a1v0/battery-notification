@@ -15,7 +15,7 @@ namespace BatteryNotification
         /// Calls EXE for ToastUtility, specifying arguments.
         /// </summary>
         /// <param name="args">String containing all CLI arguments to be provided to the ToastUtility.</param>
-        public static void ShowToast(string args)
+        public static void NotifyToast(string args)
         {
             ProcessStartInfo startInfo = new();
             startInfo.CreateNoWindow = false;
