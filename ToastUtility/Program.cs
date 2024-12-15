@@ -9,29 +9,20 @@
                 new ToastProvider().ShowToast(ToastProvider.Type.NoArgsError);
                 return;
             }
-            // 
-            // 
-            // TODO:
-            // cycle through args and trigger notifications accordingly
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
+
+            foreach (string arg in args)
+            {
+                ToastProvider toastProvider = new();
+                try
+                {
+                    int toastType = int.Parse(arg);
+                    toastProvider.ShowToast((ToastProvider.Type)toastType);
+                }
+                catch
+                {
+                    toastProvider.ShowToast(ToastProvider.Type.InvalidArgsError, arg);
+                }
+            }
         }
     }
 }
