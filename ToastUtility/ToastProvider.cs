@@ -33,6 +33,9 @@ namespace ToastUtility
                 case Type.InvalidArgsError:
                     BuildErrorToast("Error: Invalid arguments provided.", $"Args '{data}' cannot be converted into a valid toast.");
                     break;
+                case Type.TooManyArgsError:
+                    BuildErrorToast("Error: Too many arguments given.", $"ToastUtility can take exactly 1 or 2 arguments.");
+                    break;
                 default:
                     BuildErrorToast("Error: Invalid toast type given.", $"Type '{type}' is not a recognised toast type.");
                     break;
