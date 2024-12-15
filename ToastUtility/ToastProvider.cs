@@ -54,7 +54,7 @@ namespace ToastUtility
             if (batteryLife != null)
             {
                 bool isValidByte = byte.TryParse(batteryLife, out byte result);
-                if (isValidByte) body = $"Battery Charge: {batteryLife}%. Please unplug device.";
+                if (isValidByte) body = $"Battery charge: {batteryLife}%. Please unplug device.";
             }
 
             SetBody(body);
