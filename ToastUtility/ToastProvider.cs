@@ -19,6 +19,9 @@ namespace ToastUtility
         {
             switch (type)
             {
+                case Type.FullBattery:
+                    BuildFullBatteryToast();
+                    break;
                 default:
                     break;
             }
