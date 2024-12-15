@@ -11,6 +11,11 @@
             }
             if (args.Length > 2)
             {
+                // 
+                // TODO:
+                // Consider whether it's worth throwing this error or
+                // just ignoring all args beyond 2
+                // 
                 new ToastProvider().ShowToast(ToastProvider.Type.TooManyArgsError);
                 return;
             }
