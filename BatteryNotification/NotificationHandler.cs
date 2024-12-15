@@ -36,7 +36,7 @@ namespace BatteryNotification
             ProcessStartInfo startInfo = new();
             startInfo.CreateNoWindow = false;
             startInfo.UseShellExecute = false;
-            startInfo.FileName = @$"{Directory.GetCurrentDirectory()}\ToastUtility.exe";
+            startInfo.FileName = @$"{AppContext.BaseDirectory}ToastUtility.exe";
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.Arguments = args;
 
