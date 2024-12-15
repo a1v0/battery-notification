@@ -31,7 +31,7 @@ namespace ToastUtility
                     BuildErrorToast("Error: No arguments given.", "ToastUtility called without any arguments.");
                     break;
                 case Type.InvalidArgsError:
-                    BuildErrorToast("Error: Invalid arguments provided.", $"Args '{data}' cannot be converted into a valid toast.");
+                    BuildErrorToast("Error: Invalid arguments provided.", $"Input arguments '{data}' cannot be converted into a valid toast.");
                     break;
                 case Type.TooManyArgsError:
                     BuildErrorToast("Error: Too many arguments given.", $"ToastUtility can take exactly 1 or 2 arguments.");
