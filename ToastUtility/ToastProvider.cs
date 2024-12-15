@@ -58,22 +58,7 @@ namespace ToastUtility
             SetHeader(header);
             SetBody(body);
 
-            // 
-            // TODO:
-            // provide suitable icon
-            // 
-            // 
-            // un-hard-code this URI
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            ToastMessage.AddAppLogoOverride(new Uri(@"C:\Users\mensu\Desktop\battery-notification\ToastUtility\toast-icon.png"), ToastGenericAppLogoCrop.Circle);
+            ToastMessage.AddAppLogoOverride(new Uri(@$"{Directory.GetCurrentDirectory()}\error-icon.png"), ToastGenericAppLogoCrop.Circle);
         }
 
         private void SetHeader(string headerText)
