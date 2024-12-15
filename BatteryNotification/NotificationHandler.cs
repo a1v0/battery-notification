@@ -24,5 +24,14 @@ namespace BatteryNotification
             // 
             Program.MessageBox((IntPtr)0, message, NotificationHeader, 0);
         }
+
+        /// <summary>
+        /// Calls EXE for ToastUtility, specifying arguments.
+        /// </summary>
+        /// <param name="args">String containing all CLI arguments to be provided to the ToastUtility.</param>
+        public static void ShowToast(string args)
+        {
+
+        }
     }
 }
