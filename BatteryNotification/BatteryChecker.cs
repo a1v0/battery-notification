@@ -2,7 +2,7 @@ namespace BatteryNotification
 {
     public class BatteryChecker
     {
-        private static readonly byte FullChargeThreshold = 98;
+        private static readonly byte FullChargeThreshold = 80; // Set to 80, based on personal advice: charging more than 80% degrades the battery over time
 
         public static void HandleFullBattery()
         {
